@@ -6,6 +6,8 @@ const authController = {
     login: (request, response) => {
         const { username, password } = request.body;
 
+        console.log("Recieved request for username: ", username);
+
         if (username === 'admin' && password === 'admin') {
             const userDetails = {
                 name: 'John Cena',
